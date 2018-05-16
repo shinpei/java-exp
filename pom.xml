@@ -19,6 +19,7 @@
 
     <modules>
         <module>guava</module>
+        <module>httpclient</module>
     </modules>
 
 
