@@ -20,6 +20,7 @@
     <modules>
         <module>guava</module>
         <module>httpclient</module>
+        <module>immutables</module>
     </modules>
 
 
