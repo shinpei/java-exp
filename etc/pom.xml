@@ -9,14 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>immutables</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>etc</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.immutables</groupId>
-            <artifactId>value</artifactId>
-            <scope>provided</scope>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
         <!-- Test -->
         <dependency>
@@ -34,6 +32,5 @@
             <artifactId>junit-platform-launcher</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 </project>

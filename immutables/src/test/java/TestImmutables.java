@@ -1,17 +1,32 @@
-import com.github.shinpei.javaexp.immutables.ImmutableOurs;
-import com.github.shinpei.javaexp.immutables.Ours;
+
+import com.github.shinpei.javaexp.immutables.ImmutableBook;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestImmutables {
 
+    /**
+     * @Param fields are required when it's build
+     */
     @Test
-    void testImm() {
-        Ours ours = ImmutableOurs.builder()
-                .hoge(3)
-                .fuga(4)
+    @
+    void testBuildWithoutRequiredParamThrows()  {
+        assertThrows(IllegalStateException.class, () ->
+                ImmutableBook.builder()
+                        .build()
+        );
+    }
+
+    @Test
+    void testBuildWithRequiredParamOK()  {
+        ImmutableBook.builder()
+                .price(100)
+                .weight(10)
                 .build();
-        System.out.println(ours.hi());
-        ours.bye();
+
     }
 
 

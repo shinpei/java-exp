@@ -5,10 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 public class TestFluent {
 
@@ -37,7 +36,21 @@ public class TestFluent {
     }
 
     @Test
-    void concat () {
+    void combination () {
+
+        List<String> lst = Arrays.asList("coffee", "tea", "beer");
+        List<String> lst2 = Arrays.asList("American", "British", "Jamaican");
+
+        List<String> lst3 = FluentIterable.from(lst)
+                .transformAndConcat(new Function<String, Iterable<String>>() {
+                    @Override
+                    public Iterable<String> apply(String s) {
+                        return FluentIterable.from(lst2).transform(v -> v + " " + s);
+                    }
+                }).toList();
+
 
     }
+
+
 }

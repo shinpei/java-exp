@@ -5,27 +5,36 @@ import org.immutables.value.Value;
 
 @Value.Immutable
 @MyStyle
-public interface Ours {
+public abstract class Book {
 
     /**
      * It's mandatory param, if we specify parameter
      * @return
      */
     @Value.Parameter
-    int hoge();
+    abstract int price();
 
     @Value.Parameter
-    int fuga();
+    abstract int weight();
 
     /**
      * from java8, we can use default to set,
      * @return
      */
-    default int hi() {
-        return 3;
+    @Value.Default
+    String title() {
+        return "no title";
     }
 
-    default void bye() {
+    final static double TAX_RATE = 1.08;
+
+    @Value.Derived
+    double priceWithTax() {
+        return price() * TAX_RATE;
+    }
+
+
+    public final void bye() {
         System.out.println("Bye");
     }
 }
