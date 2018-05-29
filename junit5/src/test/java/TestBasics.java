@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,11 @@ public class TestBasics {
         assertThrows(NullPointerException.class, () -> {
             throw new NullPointerException();
         });
+    }
 
+    @Test
+    @Disabled
+    void testDisabled() {
+        // this is disabled test
     }
 }

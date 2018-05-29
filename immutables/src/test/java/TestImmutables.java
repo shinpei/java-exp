@@ -2,7 +2,6 @@
 import com.github.shinpei.javaexp.immutables.ImmutableBook;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -12,7 +11,6 @@ public class TestImmutables {
      * @Param fields are required when it's build
      */
     @Test
-    @
     void testBuildWithoutRequiredParamThrows()  {
         assertThrows(IllegalStateException.class, () ->
                 ImmutableBook.builder()
