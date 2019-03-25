@@ -29,4 +29,9 @@ public class TestBasics {
     void testDisabled() {
         // this is disabled test
     }
+
+    @Test
+    void testSomething() {
+        throw
+    }
 }

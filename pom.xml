@@ -25,6 +25,7 @@
         <module>etc</module>
         <module>mockito</module>
         <module>junit5</module>
+        <module>avro</module>
     </modules>
 
 
