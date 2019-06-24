@@ -26,6 +26,7 @@
         <module>mockito</module>
         <module>junit5</module>
         <module>avro</module>
+        <module>kafka-streams</module>
     </modules>
 
 
